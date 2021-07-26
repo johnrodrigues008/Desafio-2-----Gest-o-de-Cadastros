@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box; 
+    margin: 0;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #9b9af154;
+  width: 100%;
+}
+header {
+    background: #000000;
+    height: 12vh;
+    color: white;
+    width: 100%;
+    display: block;
+}
+.logo{
+    padding: 20px 100px ;
+}
+#check{
+    display: none;
+}
+#icone{
+    cursor: pointer;
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+    display: inline-block;
+    padding: 25px 26px;
+}
+.barra{
+    position: fixed;
+    transition: all .2s linear;
+    left: -300px;
+    height: 100%;
+    width: 300px;
+    top: 0;
+}
+.nav1{
+    width: 100%;
+    position: absolute;
+    top: 80px;
+}
+.nav1 a{
+    text-decoration: none;
+}
+.link{
+    background-color: #494950;
+    padding: 20px;
+    font-family: 'Arial';
+    font-size: 12pt;
+    transition: all .2s linear;
+    color: #f4f4f9;
+    border-bottom: 2px solid #222;
+    opacity: 0;
+    margin-top: 200px;
+}
+.link:hover{
+    background-color: #050542;
+}
+#check:checked ~ .barra{
+    transform: translateX(300px);
+}
+#check:checked ~ .barra nav a .link{
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: .2s;
+    display: block;   
+}
+.navegacao{
+    padding: 35px 0;
+    text-align: center;
+    background: #000000;
+    display: block;
+    color: aliceblue;
+    font-size: 20pt;  
+}
+.navegacao:hover{
+    background: rgb(1, 129, 129);
+}
+.conteudo{
+    text-align: center;
+    padding: 100px;
+}
+.carrinho { 
+    float:right;
+    padding: 20px 40px;
+}
+.carrinho p {
+    display: inline; 
+}
+.carrinho-img{
+    width: 30px;
+}
+.rotulos{
+width:100%;
+}
+.rot-titulo{
+    text-align: center;
+    padding: 50px;
+}
+table{
+   
+   align-items: center;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.tr-rotulos{
+    display: block; 
+}
+.alinharRotulos{
+    font-weight: bold;
+    font-size: 14pt;
+    
+}
+.alinhaBtns {
+    width:100px;
+    background-color: black;
+    color:white;
+    border:0px;
+    padding:15px;
+    margin: 45px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.footer-text{
+    padding: 20px 0;
+}
+footer{
+    bottom: 0;  
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    color: white;
+}

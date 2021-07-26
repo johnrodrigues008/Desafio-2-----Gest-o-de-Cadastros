@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylecadastro.css">
+
+</head>
+
+
+<body>
+    <header>
+        <div>
+            
+            <div class="carrinho">
+                <img class="carrinho-img" src="../img/carrinho-de-compras.png">
+                <p><span id="totalEstoque">0</span></p>
+            </div>
+            
+        </div>
+        <div id="main">
+
+            <input type="checkbox" id="check">
+            <label id="icone" for="check"><img src="../img/icone.png"/></label>
+            
+            <h1 class="logo">Gerence Prack</h1>
+    
+            <div class="barra">
+                <nav class="nav1">
+                    <h2><a class="navegacao" href="../cadastro/cadastro.html">Cadastro</a></h2>
+                    <h2><a class="navegacao" href="../verEstoque.html">Estoque</a></h2>
+                    <h2><a class="navegacao" href="../cadastro/cadastro.html">Financeiro</a></h2>
+                    <h2><a class="navegacao" href="../cadastro/cadastro.html">Gráficos</a></h2>
+                    <h2><a class="navegacao" href="../cadastro/cadastro.html">Operacional</a></h2>
+                    <h2><a class="navegacao" href="../cadastro/cadastro.html">Sicronização</a></h2>
+                    <h2><a class="navegacao" href="../cadastro/cadastro.html">Relatório</a></h2>
+                </nav>
+            </div>    
+        </div>
+    </header>
+    <div class="rotulos" onload="carregarTotalEstoque('totalEstoque')">
+        <table> 
+            <div class="rot-titulo"><h1>Cadastro dos Produtos</h1></div>
+            <tr>
+                <td class="alinharRotulos">Nome do Fornecedor:</td>
+                <td><input id="txtNomeFornecedor" type="text"></td>
+            </tr>
+            <tr class="rotulos">
+                <td class="alinharRotulos">Email:</td>
+                <td><input id="txtEmail" type="text"></td>
+            </tr>
+            <tr class="rotulos">
+                <td class="alinharRotulos">Telefone:</td>
+                <td><input id="txtTelefone" type="text"></td>
+            </tr>
+            <tr class="rotulos">
+                <td class="alinharRotulos">Data da compra:</td>
+                <td><input id="txtDataComp" type="text"></td>
+            </tr>
+            <tr class="rotulos">
+                <td class="alinharRotulos">Valor de entrada:</td>
+                <td><input id="txtEntrada" type="text"></td>
+            </tr>
+            <tr class="rotulos">
+                <td class="alinharRotulos">Valor de saida:</td>
+                <td><input id="txtSaida" type="text"></td>
+            </tr>
+            <tr>
+                <td class="alinharRotulos">Nome do produto:</td>
+                <td><input id="txtNomeProduto" type="text"></td>
+            </tr>
+            <tr class="rotulos"> 
+                <td class="alinharRotulos">Código</td>
+                <td><input id="txtCodProduto" type="text"></td>
+            </tr>
+            <tr>
+                <td class="alinharRotulos">Quantidade do produto:</td>
+                <td>
+                    <select id="qtidadeProduto">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+            </tr>
+            </div>
+            <div class="buttons">
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="button" value="Cadastrar" class="alinhaBtns" onclick="validarProduto('txtNomeProduto','txtCodProduto','qtidadeProduto','txtNomeFornecedor','txtEmail','txtTelefone','txtDataComp','txtSaida','txtEntrada')">
+                        <input type="button" value="Ver estoque" class="alinhaBtns" onclick="window.open('../verEstoque.html','_self')">
+                        <input type="reset" value="Limpar" class="alinhaBtns">
+                    </td>
+                </tr>
+            </div>
+        </table>
+    </div>
+    
+    <footer>
+        <p class="footer-text">Copyright &copy; 2021. Created by John Rodrigues. Powered by Gerence Prack</p>
+        <p>This project has educational purpose for Hiring Coders studies.</p>
+    </footer>
+    <script src="../js/funcoes.js"></script>
+  </body>
+</html>
